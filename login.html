@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-5">
+                <div class="card mt-5">
+                    <div class="card-header">
+                        <h3>Login</h3>
+                        <style>
+                            .container {
+                                background-image: url(image/bg1.jpg);
+                            }
+                        </style>
+                    </div>
+                    <div class="card-body" style="background-color: rgb(19, 39, 39); background-image: url(image/bg1.jpg);">
+                        <form id="loginForm">
+                            <div class="form-group">
+                                <div class="container mt-5 d-flex justify-content-center">
+                                    <img src="image/username.jpg" alt="username" style="width: 50px; height: 50px;">
+                                    <input type="text" class="form-control" id="username" placeholder="Masukkan username">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="container mt-5 d-flex justify-content-center">
+                                    <img src="image/pw.jpg" alt="password" style="width: 50px; height: 50px;">
+                                    <input type="password" class="form-control" id="password" placeholder="Masukkan password">
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block">Login</button>
+                        </form>
+                    </div>
+                    <div class="remember-forget">
+                        <label><input type="checkbox">remember me</label>
+                        <a href="#">lupa password?</a>
+                        <p>belum punya account? <a href="#">Register</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; Copyright by 21552011106_Zulfikar Gustiady</p>
+    </footer>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        document.getElementById("loginForm").addEventListener("submit", function (event) {
+            event.preventDefault();
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+            if (username === "harry" && password === "harry") {
+                window.location.href = "index.html";
+            } else {
+                alert("Login failed. Please try again.");
+            }
+        });
+    </script>
+</body>
+
+</html>
